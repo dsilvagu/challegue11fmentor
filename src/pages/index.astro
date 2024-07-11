@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import img1 from '../images/bg-pattern-top.svg';
+import img2 from '../images/bg-pattern-bottom.svg';
+---
+
+<Layout title='FMentor'>
+	<main class=" w-full min-h-screen flex flex-col justify-center items-center">
+		<img class="absolute -top-[29rem] -left-64 -z-10" src={img1.src} alt="">
+		<img class="absolute -bottom-[29rem] -right-64 -z-10" src={img2.src} alt="">
+		<Card />
+	</main>
+</Layout>

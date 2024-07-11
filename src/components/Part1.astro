@@ -1,0 +1,46 @@
+---
+interface Props {
+    name: string;
+    age: string;
+    city: string;
+    followers: string;
+    likes: string;
+    photos: string;
+    image1:string;
+}
+
+const {name, age, city, followers, likes , photos, image1} = Astro.props;
+
+import img2 from '../images/bg-pattern-card.svg'
+---
+
+<div class="max-w-sm bg-[#FFFF] rounded-xl flex flex-col items-center text-pvddblue shadow-xl">
+    <div class="">
+        <img class="rounded-t-xl" src={img2.src} alt="">
+    </div>
+    <div class="mx-auto -mt-10 relative">
+        <img class="size-20 object-cover object-center rounded-full border-4 border-[#FFFF]" src={image1} alt="">
+    </div>
+    <div class="text-center py-2">
+        <p class="pt-4 font-bold text-xl">{name}<span class="font-semibold text-pdgray text-lg pl-1"> {age}</span></p>
+        <p class="text-pdgray pb-5">{city}</p>
+    </div>
+    <hr class="bg-pdgray/10 w-full  opacity-15">
+    <div class="flex flex-row justify-between w-full px-10 py-7">
+        <div class="text-center">
+            <p class="font-bold text-xl">{followers}</p>
+            <p class="tracking-widest text-xs text-pdgray">Followers</p>
+        </div>
+
+        <div class="text-center">
+            <p class="font-bold text-xl">{likes}</p>
+            <p class="tracking-widest text-xs text-pdgray">Likes</p>
+        </div>
+
+        <div class="text-center">
+            <p class="font-bold text-xl">{photos}</p>
+            <p class="tracking-widest text-xs text-pdgray">Photos</p>
+        </div>
+    </div>
+</div>
+
